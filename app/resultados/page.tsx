@@ -10,7 +10,24 @@ import Footer from "@/components/footer"
 import { RiskToleranceChart } from "@/components/risk-tolerance-chart"
 import { AssetAllocationChart } from "@/components/asset-allocation-chart"
 import { PortfolioSimulation } from "@/components/portfolio-simulation"
-import { calculateRiskTolerance, getOptimalPortfolio } from "@/lib/investment-model"
+
+// Mock functions for demonstration
+const calculateRiskTolerance = (userData: any) => {
+  // Simulate ML model calculation
+  return Math.random() * 0.8 + 0.1
+}
+
+const getOptimalPortfolio = (riskTolerance: number) => {
+  // Simulate portfolio optimization
+  const assets = ['Ações', 'Títulos', 'Fundos Imobiliários', 'Ouro', 'CDB']
+  const weights = [0.4, 0.3, 0.15, 0.1, 0.05]
+  return {
+    assets,
+    weights,
+    expectedReturn: 0.08 + riskTolerance * 0.04,
+    risk: 0.12 + riskTolerance * 0.08,
+  }
+}
 
 export default function ResultadosPage() {
   const [loading, setLoading] = useState(true)
@@ -198,33 +215,27 @@ export default function ResultadosPage() {
 
                     <Card>
                       <CardHeader>
-                        <CardTitle>Interpretação do Perfil</CardTitle>
-                        <CardDescription>O que seu perfil de risco significa para seus investimentos</CardDescription>
+                        <CardTitle>Fatores de Influência</CardTitle>
+                        <CardDescription>Principais variáveis que afetaram seu perfil</CardDescription>
                       </CardHeader>
                       <CardContent>
-                        <div className="space-y-4 text-gray-700 dark:text-gray-300">
-                          <p>
-                            Seu perfil de risco <strong>{getRiskProfile(riskTolerance)}</strong> indica que você tem uma
-                            {riskTolerance < 0.4 ? " baixa" : riskTolerance < 0.7 ? " moderada" : " alta"} tolerância ao
-                            risco.
-                          </p>
-
-                          <p>
-                            {riskTolerance < 0.4
-                              ? "Você prioriza a segurança e a preservação do capital, mesmo que isso signifique retornos mais modestos."
-                              : riskTolerance < 0.7
-                                ? "Você busca um equilíbrio entre segurança e crescimento, aceitando alguma volatilidade em troca de retornos potencialmente maiores."
-                                : "Você está disposto a aceitar maior volatilidade e riscos em busca de retornos mais expressivos no longo prazo."}
-                          </p>
-
-                          <p>Fatores que mais influenciaram seu perfil:</p>
-
-                          <ul className="list-disc pl-5 space-y-2">
-                            <li>Horizonte de tempo de investimento</li>
-                            <li>Experiência prévia com investimentos</li>
-                            <li>Situação financeira atual</li>
-                            <li>Reação a perdas potenciais</li>
-                          </ul>
+                        <div className="space-y-4">
+                          <div className="flex justify-between">
+                            <span>Idade</span>
+                            <span className="font-medium">Fator Moderado</span>
+                          </div>
+                          <div className="flex justify-between">
+                            <span>Renda</span>
+                            <span className="font-medium">Fator Alto</span>
+                          </div>
+                          <div className="flex justify-between">
+                            <span>Patrimônio</span>
+                            <span className="font-medium">Fator Alto</span>
+                          </div>
+                          <div className="flex justify-between">
+                            <span>Experiência</span>
+                            <span className="font-medium">Fator Moderado</span>
+                          </div>
                         </div>
                       </CardContent>
                     </Card>
@@ -234,10 +245,8 @@ export default function ResultadosPage() {
                 <TabsContent value="simulacao" className="mt-6">
                   <Card>
                     <CardHeader>
-                      <CardTitle>Simulação de Desempenho</CardTitle>
-                      <CardDescription>
-                        Projeção do desempenho da carteira recomendada ao longo do tempo
-                      </CardDescription>
+                      <CardTitle>Simulação de Cenários</CardTitle>
+                      <CardDescription>Como sua carteira se comportaria em diferentes cenários de mercado</CardDescription>
                     </CardHeader>
                     <CardContent className="pt-6">
                       <div className="h-96">
@@ -248,14 +257,14 @@ export default function ResultadosPage() {
                 </TabsContent>
               </Tabs>
 
-              <div className="flex flex-col md:flex-row justify-center gap-4 mt-12">
-                <Button className="flex items-center gap-2">
-                  <Download className="h-4 w-4" />
-                  Baixar Relatório Completo
+              <div className="flex justify-center space-x-4">
+                <Button className="flex items-center space-x-2">
+                  <Download className="w-4 h-4" />
+                  <span>Baixar Relatório</span>
                 </Button>
-                <Button variant="outline" className="flex items-center gap-2">
-                  <Share2 className="h-4 w-4" />
-                  Compartilhar Resultados
+                <Button variant="outline" className="flex items-center space-x-2">
+                  <Share2 className="w-4 h-4" />
+                  <span>Compartilhar</span>
                 </Button>
               </div>
             </>
