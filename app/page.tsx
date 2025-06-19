@@ -40,9 +40,9 @@ export default function Home() {
               </div>
               <div className="md:w-1/2">
                 <img
-                  src="/placeholder.svg?height=400&width=500"
-                  alt="Ilustração de investimentos inteligentes"
-                  className="rounded-lg shadow-lg"
+                  src="/hero-investment.svg"
+                  alt="Ilustração de investimentos inteligentes com IA e gráficos"
+                  className="rounded-lg shadow-lg w-full h-auto"
                 />
               </div>
             </div>

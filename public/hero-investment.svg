@@ -1,0 +1,105 @@
+<svg width="500" height="400" viewBox="0 0 500 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3B82F6;stop-opacity:0.1" />
+      <stop offset="100%" style="stop-color:#1E40AF;stop-opacity:0.05" />
+    </linearGradient>
+    <linearGradient id="chartGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#10B981" />
+      <stop offset="100%" style="stop-color:#059669" />
+    </linearGradient>
+    <linearGradient id="robotGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6366F1" />
+      <stop offset="100%" style="stop-color:#4F46E5" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="500" height="400" fill="url(#bgGradient)" rx="20"/>
+  
+  <!-- Chart background -->
+  <rect x="50" y="80" width="200" height="120" fill="white" rx="10" stroke="#E5E7EB" stroke-width="2"/>
+  
+  <!-- Chart lines -->
+  <path d="M70 180 L90 160 L110 170 L130 140 L150 150 L170 120 L190 130 L210 100 L230 110" 
+        stroke="url(#chartGradient)" stroke-width="3" fill="none" stroke-linecap="round"/>
+  
+  <!-- Chart dots -->
+  <circle cx="70" cy="180" r="3" fill="#10B981"/>
+  <circle cx="90" cy="160" r="3" fill="#10B981"/>
+  <circle cx="110" cy="170" r="3" fill="#10B981"/>
+  <circle cx="130" cy="140" r="3" fill="#10B981"/>
+  <circle cx="150" cy="150" r="3" fill="#10B981"/>
+  <circle cx="170" cy="120" r="3" fill="#10B981"/>
+  <circle cx="190" cy="130" r="3" fill="#10B981"/>
+  <circle cx="210" cy="100" r="3" fill="#10B981"/>
+  <circle cx="230" cy="110" r="3" fill="#10B981"/>
+  
+  <!-- Chart labels -->
+  <text x="70" y="200" font-family="Arial, sans-serif" font-size="10" fill="#6B7280">Jan</text>
+  <text x="110" y="200" font-family="Arial, sans-serif" font-size="10" fill="#6B7280">Mar</text>
+  <text x="150" y="200" font-family="Arial, sans-serif" font-size="10" fill="#6B7280">May</text>
+  <text x="190" y="200" font-family="Arial, sans-serif" font-size="10" fill="#6B7280">Jul</text>
+  <text x="230" y="200" font-family="Arial, sans-serif" font-size="10" fill="#6B7280">Sep</text>
+  
+  <!-- AI Robot -->
+  <g transform="translate(300, 100)">
+    <!-- Robot head -->
+    <rect x="0" y="0" width="80" height="80" fill="url(#robotGradient)" rx="15"/>
+    
+    <!-- Robot eyes -->
+    <circle cx="25" cy="30" r="8" fill="white"/>
+    <circle cx="55" cy="30" r="8" fill="white"/>
+    <circle cx="25" cy="30" r="4" fill="#1F2937"/>
+    <circle cx="55" cy="30" r="4" fill="#1F2937"/>
+    
+    <!-- Robot mouth -->
+    <rect x="30" y="50" width="20" height="3" fill="white" rx="1"/>
+    
+    <!-- Robot antenna -->
+    <line x1="40" y1="0" x2="40" y2="-15" stroke="url(#robotGradient)" stroke-width="3"/>
+    <circle cx="40" cy="-15" r="4" fill="#EF4444"/>
+  </g>
+  
+  <!-- Financial icons -->
+  <g transform="translate(320, 220)">
+    <!-- Dollar sign -->
+    <circle cx="0" cy="0" r="25" fill="#FEF3C7" stroke="#F59E0B" stroke-width="2"/>
+    <text x="0" y="5" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#92400E" text-anchor="middle">$</text>
+  </g>
+  
+  <g transform="translate(380, 220)">
+    <!-- Chart icon -->
+    <rect x="-15" y="10" width="6" height="20" fill="#10B981" rx="2"/>
+    <rect x="-5" y="5" width="6" height="25" fill="#10B981" rx="2"/>
+    <rect x="5" y="15" width="6" height="15" fill="#10B981" rx="2"/>
+    <rect x="15" y="0" width="6" height="30" fill="#10B981" rx="2"/>
+  </g>
+  
+  <!-- Floating elements -->
+  <g transform="translate(100, 50)">
+    <!-- Brain icon -->
+    <path d="M0 0 C-10 -15, -15 -10, -20 0 C-15 10, -10 15, 0 0 Z" fill="#8B5CF6" opacity="0.8"/>
+    <path d="M5 -5 C-5 -20, -10 -15, -15 -5 C-10 5, -5 20, 5 5 Z" fill="#8B5CF6" opacity="0.6"/>
+  </g>
+  
+  <g transform="translate(400, 80)">
+    <!-- AI circuit -->
+    <rect x="0" y="0" width="40" height="30" fill="none" stroke="#6366F1" stroke-width="2" rx="5"/>
+    <line x1="5" y1="10" x2="35" y2="10" stroke="#6366F1" stroke-width="1"/>
+    <line x1="5" y1="20" x2="35" y2="20" stroke="#6366F1" stroke-width="1"/>
+    <circle cx="10" cy="10" r="2" fill="#6366F1"/>
+    <circle cx="30" cy="20" r="2" fill="#6366F1"/>
+  </g>
+  
+  <!-- Connection lines -->
+  <path d="M250 140 L300 140" stroke="#E5E7EB" stroke-width="2" stroke-dasharray="5,5"/>
+  <path d="M320 245 L380 245" stroke="#E5E7EB" stroke-width="2" stroke-dasharray="5,5"/>
+  
+  <!-- Decorative elements -->
+  <circle cx="50" cy="50" r="3" fill="#3B82F6" opacity="0.3"/>
+  <circle cx="450" cy="100" r="4" fill="#10B981" opacity="0.4"/>
+  <circle cx="80" cy="350" r="2" fill="#8B5CF6" opacity="0.5"/>
+  <circle cx="420" cy="320" r="3" fill="#F59E0B" opacity="0.3"/>
+</svg> 
