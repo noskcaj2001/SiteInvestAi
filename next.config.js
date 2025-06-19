@@ -9,9 +9,8 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  experimental: {
-    appDir: true,
-  },
+  output: 'standalone',
+  trailingSlash: false,
 }
 
 module.exports = nextConfig 
