@@ -40,7 +40,7 @@ export default function Home() {
               </div>
               <div className="md:w-1/2">
                 <img
-                  src="/robo_img.png"
+                  src="/robo_img2.png"
                   alt="Robô assistente de investimentos com IA"
                   className="rounded-lg shadow-lg w-full h-auto"
                 />
