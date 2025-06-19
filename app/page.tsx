@@ -31,9 +31,9 @@ export default function Home() {
                   Teoria de Markowitz e algoritmos avançados de aprendizado de máquina.
                 </p>
                 <div className="pt-4">
-                  <Link href="/perfil">
+                  <Link href="/robo-assistente">
                     <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
-                      Descobrir meu perfil <ArrowRight className="ml-2 h-4 w-4" />
+                      Robô Assistente <ArrowRight className="ml-2 h-4 w-4" />
                     </Button>
                   </Link>
                 </div>
